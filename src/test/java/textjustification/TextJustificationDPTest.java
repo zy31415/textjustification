@@ -42,8 +42,10 @@ public class TextJustificationDPTest {
         while ((st = br.readLine()) != null)
             words.add(Integer.parseInt(st));
 
-        int badness = new TextJustificationDP(words).optimize();
+        TextJustificationDP just = new TextJustificationDP(words);
+        int badness = just.optimize();
 
-        System.out.println(badness);
+        just.printBreaks();
+        just.print();
     }
 }

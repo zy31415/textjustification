@@ -25,22 +25,7 @@ public class TextJustificationRecursionTest {
 
         assertEquals(144649, badness);
 
-    }
+        just.printBreaks();
 
-    @Test
-    public void test2() throws IOException {
-
-        InputStream input = this.getClass().getClassLoader().getResourceAsStream("word_lens.csv");
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(input));
-
-        String st;
-        List<Integer> words = new ArrayList<>();
-        while ((st = br.readLine()) != null)
-            words.add(Integer.parseInt(st));
-
-        int badness = new TextJustificationRecursion(words).optimize();
-
-        System.out.println(badness);
     }
 }

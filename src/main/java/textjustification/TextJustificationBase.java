@@ -15,14 +15,8 @@ public abstract class TextJustificationBase {
         return Integer.MAX_VALUE;
     }
 
-    public static int cubic(int a) {
+    private static int cubic(int a) {
         return a*a*a;
-    }
-
-    protected List<Integer> words;
-
-    public TextJustificationBase(List<Integer> words) {
-        this.words = words;
     }
 
     public abstract int optimize();
